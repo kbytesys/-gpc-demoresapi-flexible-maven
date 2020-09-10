@@ -1,0 +1,24 @@
+runtime: java
+env: flex
+runtime_config:
+  jdk: openjdk8
+handlers:
+  - url: /.*
+    script: this field is required, but ignored
+manual_scaling:
+  instances: 1
+resources:
+  memory_gb: 2
+service: time-flexible-maven
+#liveness_check:
+#  path: "/actuator/health/liveness"
+#  check_interval_sec: 30
+#  timeout_sec: 4
+#  failure_threshold: 2
+#  success_threshold: 2
+#readiness_check:
+#  path: "/actuator/health/readiness"
+#  check_interval_sec: 30
+#  timeout_sec: 4
+#  failure_threshold: 2
+#  success_threshold: 2
